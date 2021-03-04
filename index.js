@@ -21,6 +21,9 @@ app.use(
     credentials: true,
   })
 );
+
+app.options('*', cors());
+
 app.use(cookieParser());
 
 if ((process.env.NODE_ENV = "development")) {
