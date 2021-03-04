@@ -15,12 +15,7 @@ connectDB();
 
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "https://spacexlaunchdashboard.herokuapp.com",
-    credentials: true,
-  })
-);
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -28,6 +23,13 @@ app.use(function(req, res, next) {
 });
 
 app.options('*', cors());
+
+app.use(
+  cors({
+    origin: "https://spacexlaunchdashboard.herokuapp.com",
+    credentials: true,
+  })
+);
 
 app.use(cookieParser());
 
