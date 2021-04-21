@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://spacexlaunchdashboard.herokuapp.com/",
+    origin: "https://spacexlaunchdashboard.herokuapp.com",
     credentials: true,
   })
 );
